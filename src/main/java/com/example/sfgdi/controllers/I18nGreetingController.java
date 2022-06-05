@@ -4,18 +4,18 @@ import com.example.sfgdi.services.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-@Controller
-public class ConstrucktorInjectionController
+@Controller("i18n")
+public class I18nGreetingController
 {
     GreetingService greetingService;
 
-    public ConstrucktorInjectionController(@Qualifier("constructorGreetingServiceImpl") GreetingService greetingService)
+    public I18nGreetingController(@Qualifier("i18nGreeting") GreetingService greetingService)
     {
         this.greetingService = greetingService;
     }
 
-    public String sayHallo()
+    public void sayHallo()
     {
-        return greetingService.greeting();
+        System.out.println(greetingService.greeting());
     }
 }

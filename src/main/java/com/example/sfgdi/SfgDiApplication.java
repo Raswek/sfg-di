@@ -13,8 +13,7 @@ public class SfgDiApplication {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(SfgDiApplication.class, args);
 		MyController myController = (MyController) applicationContext.getBean("myController");
 
-		String s = myController.sayHallo();
-		System.out.println(s);
+		System.out.println(myController.sayHallo());
 
 		System.out.println("_________Property");
 		PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("propertyInjectionController");
@@ -27,6 +26,9 @@ public class SfgDiApplication {
 		System.out.println("__________Construcktor");
 		ConstrucktorInjectionController construcktorInjectionController = (ConstrucktorInjectionController) applicationContext.getBean("construcktorInjectionController");
 		System.out.println(construcktorInjectionController.sayHallo());
+
+		I18nGreetingController i18nGreetingController = (I18nGreetingController) applicationContext.getBean("i18n");
+		i18nGreetingController.sayHallo();
 	}
 
 }

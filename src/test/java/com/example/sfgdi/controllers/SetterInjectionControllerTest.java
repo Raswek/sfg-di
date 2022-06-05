@@ -13,7 +13,7 @@ class SetterInjectionControllerTest
     void setUp()
     {
         setterInjectionController = new SetterInjectionController();
-        setterInjectionController.setGreetingService(new GreetingServiceImpl());
+        setterInjectionController.setGreetingService(new ConstructorGreetingServiceImpl());
 
         System.out.println(setterInjectionController.sayHallo());
     }

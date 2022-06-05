@@ -14,7 +14,7 @@ class PropertyInjectionControllerTest
     void setUp()
     {
         propertyInjectionController = new PropertyInjectionController();
-        propertyInjectionController.greetingService = new GreetingServiceImpl();
+        propertyInjectionController.greetingService = new ConstructorGreetingServiceImpl();
 
         System.out.println(propertyInjectionController.sagHallo());
     }

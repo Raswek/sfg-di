@@ -13,7 +13,7 @@ class ConstrucktorInjectionControllerTest
     @BeforeEach
     void setUp()
     {
-        construcktorInjectionController = new ConstrucktorInjectionController(new GreetingServiceImpl());
+        construcktorInjectionController = new ConstrucktorInjectionController(new ConstructorGreetingServiceImpl());
     }
 
     @Test
